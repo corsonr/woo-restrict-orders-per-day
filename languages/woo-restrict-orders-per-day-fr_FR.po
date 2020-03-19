@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Restrict Orders per Day for WooCommerce\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2020-03-19 11:18+0100\n"
+"POT-Creation-Date: 2020-03-19 11:47+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Remi Corson, corsonr\n"
@@ -24,19 +24,30 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: woo-restrict-orders-per-day.php:32
+#: woo-restrict-orders-per-day.php:37
 msgid "Maximum order day"
 msgstr "Limite de commandes par jour"
 
-#: woo-restrict-orders-per-day.php:33
+#: woo-restrict-orders-per-day.php:38
 msgid "Define the number of order you can handle."
 msgstr "Définissez le nombre de commandes que vous pouvez traiter par jour."
 
-#: woo-restrict-orders-per-day.php:39
+#: woo-restrict-orders-per-day.php:44
 msgid "You must enter a number."
 msgstr "Vous devez saisir un nombre."
 
-#: woo-restrict-orders-per-day.php:84
+#: woo-restrict-orders-per-day.php:48
+msgid "Message displayed when limit is reached"
+msgstr "Message affiché lorsque la limite est dépassée"
+
+#: woo-restrict-orders-per-day.php:49
+msgid "The message your customers will see when the order limit is reached."
+msgstr ""
+"Le message que vos clients verront quand la limite de commandes est "
+"dépassée."
+
+#: woo-restrict-orders-per-day.php:53 woo-restrict-orders-per-day.php:54
+#: woo-restrict-orders-per-day.php:92
 msgid ""
 "We exceeded our capacity and we are sorry to say we can not take new orders "
 "for today!"
