@@ -34,8 +34,8 @@ function woo_restrict_orders_per_day_settings( $settings ) {
 		isset( $section['type'] ) && 'sectionend' == $section['type'] ) {
 
 			$updated_settings[] = array(
-				'name'     => __( 'Maximum order day', 'woo-restrict-orders-per-day' ),
-				'desc_tip' => __( 'Define the number of order you can handle.', 'woo-restrict-orders-per-day' ),
+				'name'     => __( 'Maximum orders per day', 'woo-restrict-orders-per-day' ),
+				'desc_tip' => __( 'Define the number of orders your shop can handle.', 'woo-restrict-orders-per-day' ),
 				'id'       => 'woocommerce_max_orders_per_day',
 				'type'     => 'number',
 				'css'      => 'min-width:300px;',
