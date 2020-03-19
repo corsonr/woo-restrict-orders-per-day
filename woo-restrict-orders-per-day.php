@@ -18,6 +18,11 @@
  * Edit the number of orders per day via the WooCommerce > Settings > General meu item.
  */
 
+function woo_restrict_orders_per_day_textdomain() {
+    load_plugin_textdomain( 'woo-restrict-orders-per-day', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
+}
+add_action( 'plugins_loaded', 'woo_restrict_orders_per_day_textdomain' );
+
 add_filter( 'woocommerce_general_settings', 'woo_restrict_orders_per_day_settings' );
 function woo_restrict_orders_per_day_settings( $settings ) {
 
@@ -30,7 +35,7 @@ function woo_restrict_orders_per_day_settings( $settings ) {
 
 			$updated_settings[] = array(
 				'name'     => __( 'Maximum order day', 'woo-restrict-orders-per-day' ),
-				'desc_tip' => __( 'Define the number of order you can handle.', 'woo-restrict-orders-per-days' ),
+				'desc_tip' => __( 'Define the number of order you can handle.', 'woo-restrict-orders-per-day' ),
 				'id'       => 'woocommerce_max_orders_per_day',
 				'type'     => 'number',
 				'css'      => 'min-width:300px;',
