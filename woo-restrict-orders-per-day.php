@@ -91,7 +91,7 @@ function enable_catalog_mode() {
 	$orders_capacity = get_option( 'woocommerce_max_orders_per_day' );
 	$default_orders_capacity_message = __( 'We exceeded our capacity and we are sorry to say we can not take new orders for today!', 'woo-restrict-orders-per-day' );
 	$orders_capacity_message = get_option( 'woocommerce_max_orders_per_day_message', $default_orders_capacity_message );
-	
+
 	if ( empty ( $orders_capacity_message ) ) {
 		$orders_capacity_message = $default_orders_capacity_message;
 	}
@@ -101,8 +101,9 @@ function enable_catalog_mode() {
 		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 		remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
-
-		wc_add_notice( $orders_capacity_message, 'notice' );
+		if ( function_exists( 'wc_add_notice' ) ) {
+			wc_add_notice( $orders_capacity_message, 'notice' );
+		}
 
 	}
 
