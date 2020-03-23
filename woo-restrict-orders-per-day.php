@@ -82,7 +82,7 @@ if ( ! class_exists( 'ROPD_Restrict_Orders_Per_Day' ) ) {
 						'name'     => __( 'Message displayed when limit is reached', 'woo-restrict-orders-per-day' ),
 						'desc_tip' => __( 'The message your customers will see when the order limit is reached.', 'woo-restrict-orders-per-day' ),
 						'id'       => 'woocommerce_max_orders_per_day_message',
-						'type'     => 'text',
+						'type'     => 'textarea',
 						'css'      => 'min-width:300px;',
 						'std'      => __( 'We exceeded our capacity and we are sorry to say we can not take new orders for today!', 'woo-restrict-orders-per-day' ),  // WC < 2.0
 						'default'  => __( 'We exceeded our capacity and we are sorry to say we can not take new orders for today!', 'woo-restrict-orders-per-day' ),  // WC >= 2.0
